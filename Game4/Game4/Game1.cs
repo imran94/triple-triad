@@ -28,9 +28,9 @@ namespace Game4
 
 
 
-        //Tile t = new Tile(0, 10, 10, 100, 100);
-        //Tile[] tiles = new Tile[2];
+
         Tile[,] tiles = new Tile[3, 3];
+        Card[] cards = new Card[3];
 
         int windowW, windowH;
 
@@ -50,9 +50,11 @@ namespace Game4
             int w = 150, h = 200, offsetX = 0, offsetY = 10, left = (int)(windowW /2 - 1.5*w + offsetX), top = (int)(windowH / 2 - 1.5 * h + offsetY);
 
             for (int i = 0; i < 9; i++)
-            {
-                tiles[i / 3, i % 3] = new Tile(0, left + i / 3 * w, top + i % 3 * h, w, h);
-            }
+                tiles[i / 3, i % 3] = new Tile(true, left + i / 3 * w, top + i % 3 * h, w, h);
+
+            //temporary values
+            for (int i = 0; i < 3; i++)
+                cards[i] = new Card(true, 50 + 100, 20 + i * 105, 100, 100);
 
             base.Initialize();
         }
@@ -66,10 +68,12 @@ namespace Game4
 
             pixel = new Texture2D(GraphicsDevice, 1, 1);
             pixel.SetData(new[] { Color.White });
-            //t.LoadContent(pixel);
 
-            foreach (Tile ts in tiles)
-            { ts.LoadContent(pixel); }
+            foreach (Tile t in tiles)
+                t.LoadContent(pixel);
+
+            foreach (Card c in cards)
+                c.LoadContent(pixel);
         }
 
 
@@ -79,52 +83,37 @@ namespace Game4
         {
             spriteBatch.Dispose();
 
-            //t.Unload();
-            foreach (Tile ts in tiles)
-            { ts.Unload(); }
+            foreach (Tile t in tiles)
+                t.Unload();
+
+            foreach (Card c in cards)
+                c.Unload();
         }
 
 
 
-
+        
         
         MouseState mouse;
+        Rectangle from, to;
         protected override void Update(GameTime gameTime)
         {
             mouse = Mouse.GetState();
 
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            /*
-            if (t.Rectangle.Contains(mouse.X, mouse.Y))
-            {
-                t.State = 1;
-                Debug.WriteLine(mouse.X + "," + mouse.Y);
-            }
-            else
-            {
-                t.State = 0;
-            }
-            t.Update();
-            //*/
+
+            foreach (Tile t in tiles)
+                if(t.Available) //update might be more taxing than just checking just if tile is available
+                    t.Update(ref from, ref to);
+
+            foreach (Card c in cards)
+                if (c.Selectable) //update might be more taxing than just checking just if tile is available
+                    c.Update(ref from, ref to);
 
 
-            foreach (Tile ts in tiles)
-            {
-                if (ts.Rectangle.Contains(mouse.X, mouse.Y))
-                {
-                    ts.State = 1;
-                    //Debug.WriteLine(mouse.X + "," + mouse.Y);
-                }
-                else
-                {
-                    ts.State = 0;
-                }
-                ts.Update();
-            }
-
-            //
+            Debug.WriteLine(to);
 
             base.Update(gameTime);
         }
@@ -139,9 +128,10 @@ namespace Game4
             GraphicsDevice.Clear(Color.WhiteSmoke);
 
             spriteBatch.Begin();
-                //t.Draw(spriteBatch);
-                foreach (Tile ts in tiles)
-                { ts.Draw(spriteBatch); }
+                foreach (Tile t in tiles)
+                    t.Draw(spriteBatch);
+                foreach (Card c in cards)
+                    c.Draw(spriteBatch);
             spriteBatch.End();
 
             base.Draw(gameTime);

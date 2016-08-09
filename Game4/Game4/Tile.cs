@@ -13,23 +13,24 @@ namespace Game4
 {
     class Tile : Obj
     {
-        Color color = Color.Gray;
-
-        private int state;
-            public int State { get { return state; } set { state = value; } }
+        private bool available; //, 0 available, 1 active
+            public bool Available { get { return available; } set { available = value; } }
         private Rectangle rectangle;
             public Rectangle Rectangle { get { return rectangle; } }
 
+        private Color color, neutral = Color.Gray, hover = Color.Red, marked = Color.Blue;
 
         public Tile() { }
 
-        public Tile(int state, int x, int y, int w, int h)
+        public Tile(bool available, int x, int y, int w, int h)
         {
-            this.state = state;
+            this.available = available;
             rectangle.X = x;
             rectangle.Y = y;
             rectangle.Width = w;
             rectangle.Height = h;
+
+            color = neutral;
         }
 
 
@@ -45,16 +46,28 @@ namespace Game4
             sprite.Dispose();
         }
 
-
-        public override void Update()
+        MouseState mouse;
+        public void Update(ref Rectangle from, ref Rectangle to)
         {
-            if (state > 0)
+            mouse = Mouse.GetState();
+
+            if (rectangle.Contains(mouse.X, mouse.Y))
             {
-                color = Color.Red;
+                color = hover;
+                if (mouse.LeftButton == ButtonState.Pressed && from != Rectangle.Empty) // && available if not checked in game
+                {
+                    //color = marked;
+                    available = false;
+                    to = rectangle;
+                    from = Rectangle.Empty;
+
+                    color = neutral;
+                }
             }
             else
             {
-                color = Color.Gray;
+                //if(available) //enable if not checked in game
+                color = neutral;
             }
         }
 
