@@ -21,19 +21,22 @@ namespace Game4
         private Rectangle rectangle;
         public Rectangle Rectangle { get { return rectangle; } }
 
+        private const int width = 100;
+        private const int height = 100; 
+
         private Color color, neutral = Color.Gray, hover = Color.Red, marked = Color.Blue, played = Color.Green;
         //private int initX, initY;
 
 
         public Card() { }
 
-        public Card(bool selectable, int x, int y, int w, int h)
+        public Card(bool selectable, int x, int y)
         {
             this.selectable = selectable;
             rectangle.X = x;
             rectangle.Y = y;
-            rectangle.Width = w;
-            rectangle.Height = h;
+            rectangle.Width = width;
+            rectangle.Height = height;
 
             //initX = x;
             //initY = y;
