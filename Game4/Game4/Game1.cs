@@ -13,27 +13,17 @@ namespace Game4
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        
-
-        
-
-        
-
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-
         }
 
-
-
-
         Tile[,] tiles = new Tile[3, 3];
-        Card[] cards = new Card[3];
+        Card[] playerCards = new Card[3];
+        Card[] compCards = new Card[3];
 
         int windowW, windowH;
-
 
         protected override void Initialize()
         {
@@ -47,14 +37,20 @@ namespace Game4
             //tiles[0] = new Tile(0, 10, 10, 100, 100);
             //tiles[1] = new Tile(0, 400, 10, 100, 100);
 
-            int w = 150, h = 200, offsetX = 0, offsetY = 10, left = (int)(windowW /2 - 1.5*w + offsetX), top = (int)(windowH / 2 - 1.5 * h + offsetY);
+            int w = 150, h = 200,
+                offsetX = 0, offsetY = 10,
+                left = (int)(windowW / 2 - 1.5 * w + offsetX),
+                top = (int)(windowH / 2 - 1.5 * h + offsetY);
 
             for (int i = 0; i < 9; i++)
                 tiles[i / 3, i % 3] = new Tile(true, left + i / 3 * w, top + i % 3 * h, w, h);
 
             //temporary values
             for (int i = 0; i < 3; i++)
-                cards[i] = new Card(true, 50 + 100, 20 + i * 105, 100, 100);
+            {
+                playerCards[i] = new Card(true, w, top + i * 105);
+                compCards[i] = new Card(true, windowW - w, top + i * 105);
+            }
 
             base.Initialize();
         }
@@ -72,7 +68,10 @@ namespace Game4
             foreach (Tile t in tiles)
                 t.LoadContent(pixel);
 
-            foreach (Card c in cards)
+            foreach (Card c in playerCards)
+                c.LoadContent(pixel);
+
+            foreach (Card c in compCards)
                 c.LoadContent(pixel);
         }
 
@@ -86,13 +85,12 @@ namespace Game4
             foreach (Tile t in tiles)
                 t.Unload();
 
-            foreach (Card c in cards)
+            foreach (Card c in playerCards)
+                c.Unload();
+
+            foreach (Card c in compCards)
                 c.Unload();
         }
-
-
-
-        
         
         MouseState mouse;
         Rectangle from, to;
@@ -103,15 +101,17 @@ namespace Game4
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-
             foreach (Tile t in tiles)
                 if(t.Available) //update might be more taxing than just checking just if tile is available
                     t.Update(ref from, ref to);
 
-            foreach (Card c in cards)
+            foreach (Card c in playerCards)
                 if (c.Selectable) //update might be more taxing than just checking just if tile is available
                     c.Update(ref from, ref to);
 
+            foreach (Card c in compCards)
+                if (c.Selectable) //update might be more taxing than just checking just if tile is available
+                    c.Update(ref from, ref to);
 
             Debug.WriteLine(to);
 
@@ -130,7 +130,9 @@ namespace Game4
             spriteBatch.Begin();
                 foreach (Tile t in tiles)
                     t.Draw(spriteBatch);
-                foreach (Card c in cards)
+                foreach (Card c in playerCards)
+                    c.Draw(spriteBatch);
+                foreach (Card c in compCards)
                     c.Draw(spriteBatch);
             spriteBatch.End();
 
