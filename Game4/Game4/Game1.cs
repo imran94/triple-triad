@@ -13,13 +13,15 @@ namespace Game4
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        System.Random rnd;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
 
-        Tile[,] tiles = new Tile[3, 3];
+        Tile[] tiles = new Tile[9];
         Card[] playerCards = new Card[3];
         Card[] compCards = new Card[3];
 
@@ -43,13 +45,15 @@ namespace Game4
                 top = (int)(windowH / 2 - 1.5 * h + offsetY);
 
             for (int i = 0; i < 9; i++)
-                tiles[i / 3, i % 3] = new Tile(true, left + i / 3 * w, top + i % 3 * h, w, h);
+                tiles[i] = new Tile(true, left + i / 3 * w, top + i % 3 * h, w, h);
+
+            rnd = new System.Random();
 
             //temporary values
             for (int i = 0; i < 3; i++)
             {
-                playerCards[i] = new Card(true, w, top + i * 105);
-                compCards[i] = new Card(true, windowW - w, top + i * 105);
+                playerCards[i] = new Card(true, w, top + i * 105, rnd);
+                compCards[i] = new Card(false, windowW - w, top + i * 105, rnd);
             }
 
             base.Initialize();
@@ -69,14 +73,11 @@ namespace Game4
                 t.LoadContent(pixel);
 
             foreach (Card c in playerCards)
-                c.LoadContent(pixel);
+                c.LoadContent(Content, pixel);
 
             foreach (Card c in compCards)
-                c.LoadContent(pixel);
+                c.LoadContent(Content, pixel);
         }
-
-
-
 
         protected override void UnloadContent()
         {
@@ -106,23 +107,20 @@ namespace Game4
                     t.Update(ref from, ref to);
 
             foreach (Card c in playerCards)
+            {
                 if (c.Selectable) //update might be more taxing than just checking just if tile is available
                     c.Update(ref from, ref to);
 
-            foreach (Card c in compCards)
-                if (c.Selectable) //update might be more taxing than just checking just if tile is available
-                    c.Update(ref from, ref to);
-
-            Debug.WriteLine(to);
-
+                if (c.Moved)
+                {
+                    Debug.WriteLine("Card moved");
+                    nextTurn();
+                    c.Moved = false;
+                }
+            }
             base.Update(gameTime);
         }
-
-
-
-
-
-
+        
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.WhiteSmoke);
@@ -137,6 +135,57 @@ namespace Game4
             spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+
+        private void nextTurn()
+        {
+            int cardIndex = 0;
+            int selectableCards = 0;
+
+            foreach (Card c in compCards)
+            {
+                if (c.Selectable)
+                {
+                    selectableCards++;
+                }
+            }
+
+            if (selectableCards == 3)
+            {
+                cardIndex = rnd.Next(0, 2);
+            }
+            else if (selectableCards == 2)
+            {
+                cardIndex = rnd.Next(0, 1);
+            }
+            else
+            {
+                for (int i = 0; i < compCards.Length; i++)
+                {
+                    if (compCards[i].Selectable)
+                    {
+                        cardIndex = i;
+                    }
+                }
+            }
+
+            int tileIndex = rnd.Next(0, 9);
+
+            while (!tiles[tileIndex].Available)
+            {
+                tileIndex = rnd.Next(0, 9);
+            }
+
+            Card selectedCard = compCards[cardIndex];
+            Tile selectedTile = tiles[tileIndex];
+
+            Rectangle cardRectangle = selectedCard.Rectangle;
+            Rectangle tileRectangle = selectedTile.Rectangle;
+
+            Debug.WriteLine("cardIndex: " + cardIndex);
+            Debug.WriteLine("tileIndex: " + tileIndex);
+
+            selectedCard.Update(ref cardRectangle, ref tileRectangle);
         }
     }
 }

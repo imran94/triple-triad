@@ -16,7 +16,7 @@ namespace Game4
         private bool available; //, 0 available, 1 active
             public bool Available { get { return available; } set { available = value; } }
         private Rectangle rectangle;
-            public Rectangle Rectangle { get { return rectangle; } }
+            public Rectangle Rectangle { get { return rectangle; } set { rectangle = value; } }
 
         private Color color, neutral = Color.Gray, hover = Color.Red, marked = Color.Blue;
 

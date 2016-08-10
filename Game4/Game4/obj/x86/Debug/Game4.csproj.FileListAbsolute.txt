@@ -47,4 +47,5 @@ C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\
 C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.xml
 C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.xml
 C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\Content\Arial.xnb
 C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\obj\x86\Debug\Game4.csprojResolveAssemblyReference.cache
