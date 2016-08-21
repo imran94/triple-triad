@@ -12,6 +12,9 @@ namespace Game4
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        SpriteFont textFont;
+
+        Vector2 fontPos;
 
         System.Random rnd;
 
@@ -26,6 +29,7 @@ namespace Game4
         Card[] compCards = new Card[3];
 
         int windowW, windowH;
+        int w, h, top, left;
 
         protected override void Initialize()
         {
@@ -39,10 +43,10 @@ namespace Game4
             //tiles[0] = new Tile(0, 10, 10, 100, 100);
             //tiles[1] = new Tile(0, 400, 10, 100, 100);
 
-            int w = 150, h = 200,
-                offsetX = 0, offsetY = 10,
-                left = (int)(windowW / 2 - 1.5 * w + offsetX),
-                top = (int)(windowH / 2 - 1.5 * h + offsetY);
+            w = 150; h = 200;
+            int offsetX = 0, offsetY = 10;
+            left = (int)(windowW / 2 - 1.5 * w + offsetX);
+            top = (int)(windowH / 2 - 1.5 * h + offsetY);
 
             for (int i = 0; i < 9; i++)
                 tiles[i] = new Tile(true, left + i / 3 * w, top + i % 3 * h, w, h);
@@ -65,6 +69,8 @@ namespace Game4
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            textFont = Content.Load<SpriteFont>("Arial");
+            fontPos = new Vector2();
 
             pixel = new Texture2D(GraphicsDevice, 1, 1);
             pixel.SetData(new[] { Color.White });
@@ -126,6 +132,9 @@ namespace Game4
             GraphicsDevice.Clear(Color.WhiteSmoke);
 
             spriteBatch.Begin();
+                fontPos.X = w;
+                fontPos.Y = top;
+
                 foreach (Tile t in tiles)
                     t.Draw(spriteBatch);
                 foreach (Card c in playerCards)
@@ -139,35 +148,7 @@ namespace Game4
 
         private void nextTurn()
         {
-            int cardIndex = 0;
-            int selectableCards = 0;
-
-            foreach (Card c in compCards)
-            {
-                if (c.Selectable)
-                {
-                    selectableCards++;
-                }
-            }
-
-            if (selectableCards == 3)
-            {
-                cardIndex = rnd.Next(0, 2);
-            }
-            else if (selectableCards == 2)
-            {
-                cardIndex = rnd.Next(0, 1);
-            }
-            else
-            {
-                for (int i = 0; i < compCards.Length; i++)
-                {
-                    if (compCards[i].Selectable)
-                    {
-                        cardIndex = i;
-                    }
-                }
-            }
+            int cardIndex = pickCard();
 
             int tileIndex = rnd.Next(0, 9);
 
@@ -179,13 +160,42 @@ namespace Game4
             Card selectedCard = compCards[cardIndex];
             Tile selectedTile = tiles[tileIndex];
 
-            Rectangle cardRectangle = selectedCard.Rectangle;
-            Rectangle tileRectangle = selectedTile.Rectangle;
+            from = selectedCard.Rectangle;
+            to = selectedTile.Rectangle;
 
             Debug.WriteLine("cardIndex: " + cardIndex);
             Debug.WriteLine("tileIndex: " + tileIndex);
+        }
 
-            selectedCard.Update(ref cardRectangle, ref tileRectangle);
+        private int pickCard()
+        {
+            int selectableCards = 0;
+            foreach (Card c in compCards)
+            {
+                if (c.Selectable)
+                {
+                    selectableCards++;
+                }
+            }
+
+            if (selectableCards == 3)
+            {
+                return rnd.Next(0, 2);
+            }
+            else if (selectableCards == 2)
+            {
+                return rnd.Next(0, 1);
+            }
+
+            for (int i = 0; i < compCards.Length; i++)
+            {
+                if (compCards[i].Selectable)
+                {
+                    return i;
+                }
+            }
+
+            return 0;
         }
     }
 }
