@@ -22,6 +22,8 @@ namespace Game4
         private SpriteFont font;
         private Vector2 fontPos;
 
+        private int id;
+            public int ID { get { return id; } }
         private bool selected;
             public bool Selected { get { return selected; } set { selected = value; } }
         private bool selectable;
@@ -31,8 +33,11 @@ namespace Game4
         private Rectangle rectangle;
             public Rectangle Rectangle { get { return rectangle; } set { rectangle = value; } }
 
+        private bool dealt;
+        public bool Dealt { get { return dealt; } set { dealt = value; } }
+
         private const int width = 100;
-        private const int height = 100; 
+        private const int height = 100;
 
         private Color color, neutral = Color.Gray, hover = Color.Red, marked = Color.Blue, played = Color.Green;
         //private int initX, initY;
@@ -52,12 +57,31 @@ namespace Game4
             rectangle.Width = width;
             rectangle.Height = height;
 
-            //initX = x;
-            //initY = y;
             selected = false;
             color = neutral;
         }
-        
+
+        public Card(int id, bool selectable, int x, int y, int n, int s, int e, int w)
+        {
+
+            this.selectable = selectable;
+            north = n;
+            south = s;
+            east = e;
+            west = w;
+            rectangle.X = x;
+            rectangle.Y = y;
+            rectangle.Width = width;
+            rectangle.Height = height;
+            dealt = false;
+
+            selected = false;
+            color = neutral;
+        }
+
+
+
+
         public virtual void LoadContent(ContentManager content, Texture2D texture)
         {
             sprite = texture;
@@ -85,9 +109,6 @@ namespace Game4
                     color = marked;
                     to = Rectangle.Empty;
                     from = rectangle;
-
-                    //rectangle.X = mouse.X - rectangle.Width / 2;
-                    //rectangle.Y = mouse.Y - rectangle.Height / 2;
                 }
             }
             else
@@ -109,8 +130,12 @@ namespace Game4
                 if (!selected && selectable)//enable if not checked in game
                     color = neutral;
             }
+        }
 
-            
+        public void move(Rectangle to)
+        {
+            rectangle.X = to.X + to.Width / 2 - rectangle.Width / 2;
+            rectangle.Y = to.Y + to.Height / 2 - rectangle.Height / 2;
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)
@@ -135,5 +160,5 @@ namespace Game4
         }
 
 
-    }
-}
+    }//end class========================================================
+}//end namespace========================================================

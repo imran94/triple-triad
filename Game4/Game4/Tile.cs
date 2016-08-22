@@ -13,10 +13,14 @@ namespace Game4
 {
     class Tile : Obj
     {
+        private int id;
+            public int ID { get { return id; } }
         private bool available; //, 0 available, 1 active
             public bool Available { get { return available; } set { available = value; } }
         private Rectangle rectangle;
             public Rectangle Rectangle { get { return rectangle; } set { rectangle = value; } }
+
+        //public Tile All { get { return this; } }
 
         private Color color, neutral = Color.Gray, hover = Color.Red, marked = Color.Blue;
 
@@ -33,6 +37,16 @@ namespace Game4
             color = neutral;
         }
 
+        public Tile(int id, bool available, int x, int y, int w, int h)
+        {
+            this.available = available;
+            rectangle.X = x;
+            rectangle.Y = y;
+            rectangle.Width = w;
+            rectangle.Height = h;
+
+            color = neutral;
+        }
 
 
         public void LoadContent(Texture2D texture)
@@ -80,5 +94,5 @@ namespace Game4
         }
 
 
-    }
-}
+    }//end class========================================================
+}//end namespace========================================================

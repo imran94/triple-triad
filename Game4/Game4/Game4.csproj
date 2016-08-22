@@ -39,6 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Card.cs" />
+    <Compile Include="CardValueGenerator.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Obj.cs" />
     <Compile Include="Program.cs" />

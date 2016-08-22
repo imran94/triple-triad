@@ -12,8 +12,9 @@ void generate()
 	int sumCol[4] = {0,0,0,0};
 	
 	int lw, up;
+	const int cardLimit = 3;
 	
-	for(int i=0; i<5;i++)
+	for(int i=0; i<cardLimit;i++)
 	{
 		sumRow=0;
 		
@@ -23,8 +24,8 @@ void generate()
 			lw = max(max(1,limLw[j]-sumRow),limLw[i]-sumCol[j]);
 			up = min(min(9,limUp[j]-sumRow),limUp[i]-sumCol[j]);
 			
-			int rng = rand()%(up-lw+1) + lw;
-			//int rng = lw; //force lower|upper limit
+			//int rng = rand()%(up-lw+1) + lw;
+			int rng = up; //force lower|upper limit
 			sumRow+=rng;
 			sumCol[j]+=rng;
 			

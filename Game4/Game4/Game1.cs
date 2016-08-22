@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 using System.Diagnostics;
 
 namespace Game4
@@ -31,6 +32,11 @@ namespace Game4
         int windowW, windowH;
         int w, h, top, left;
 
+        const int numOfCard = 3;
+
+        private int[,] cardVal = new int[numOfCard, 4];
+
+        //init==============================================================================
         protected override void Initialize()
         {
             windowW = 1280; windowH = 680;
@@ -40,28 +46,41 @@ namespace Game4
             graphics.ApplyChanges();
             this.IsMouseVisible = true;
 
-            //tiles[0] = new Tile(0, 10, 10, 100, 100);
-            //tiles[1] = new Tile(0, 400, 10, 100, 100);
-
             w = 150; h = 200;
             int offsetX = 0, offsetY = 10;
             left = (int)(windowW / 2 - 1.5 * w + offsetX);
             top = (int)(windowH / 2 - 1.5 * h + offsetY);
 
             for (int i = 0; i < 9; i++)
-                tiles[i] = new Tile(true, left + i / 3 * w, top + i % 3 * h, w, h);
+                tiles[i] = new Tile(i, true, left + i / 3 * w, top + i % 3 * h, w, h);
 
             rnd = new System.Random();
 
+            /*
             //temporary values
             for (int i = 0; i < 3; i++)
             {
                 playerCards[i] = new Card(true, w, top + i * 105, rnd);
                 compCards[i] = new Card(false, windowW - w, top + i * 105, rnd);
             }
+            //*/
+
+            //generate a 2d array, pass same value to both player and comp cards
+            //rng(ref cardVal);
+            CardValueGenerator cardValGen = new CardValueGenerator(ref cardVal, numOfCard);
+            for (int i = 0; i < 3; i++)
+            {
+                playerCards[i] = new Card(i, true, w, top + i * 105, cardVal[i,0], cardVal[i, 1], cardVal[i, 2], cardVal[i, 3]);
+                compCards[i] = new Card(i, false, windowW - w, top + i * 105, cardVal[i, 0], cardVal[i, 1], cardVal[i, 2], cardVal[i, 3]);
+            }
+
+
+
+
 
             base.Initialize();
         }
+        //end init==============================================================================
 
 
 
@@ -148,27 +167,46 @@ namespace Game4
 
         private void nextTurn()
         {
-            int cardIndex = pickCard();
+            int cardIndex;// = pickCard();
 
-            int tileIndex = rnd.Next(0, 9);
 
+            int tileIndex;// = rnd.Next(0, 9);
+            /*
             while (!tiles[tileIndex].Available)
             {
                 tileIndex = rnd.Next(0, 9);
+            }//*/
+
+            do
+            {
+                cardIndex = rnd.Next(0, numOfCard);
             }
+            while (compCards[cardIndex].Dealt);
+            compCards[cardIndex].Dealt = true;
 
-            Card selectedCard = compCards[cardIndex];
-            Tile selectedTile = tiles[tileIndex];
+            do
+            {
+                tileIndex = rnd.Next(0, 9);
+            }
+            while (!tiles[tileIndex].Available);
+            tiles[tileIndex].Available = false;
 
-            from = selectedCard.Rectangle;
-            to = selectedTile.Rectangle;
+            //Card selectedCard = compCards[cardIndex];
+            //Tile selectedTile = tiles[tileIndex];
+
+            //from = selectedCard.Rectangle;
+            to = tiles[tileIndex].Rectangle;
+            compCards[cardIndex].move(to);
+            compCards[cardIndex].Selectable = false;
 
             Debug.WriteLine("cardIndex: " + cardIndex);
             Debug.WriteLine("tileIndex: " + tileIndex);
         }
 
+        /*
         private int pickCard()
         {
+            
             int selectableCards = 0;
             foreach (Card c in compCards)
             {
@@ -196,9 +234,14 @@ namespace Game4
             }
 
             return 0;
-        }
-    }
-}
+        }//*/
+
+
+
+
+
+    }//end class========================================================
+}//end namespace========================================================
 
 
 
