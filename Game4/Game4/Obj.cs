@@ -18,7 +18,7 @@ namespace Game4
         protected Vector2 location;
         protected float rotation = 0.0f;
         protected float scale = 1.0f;
-        protected string spriteAsset = "placeholder";
+        protected string spriteAsset;
 
         public Obj(Vector2 coordinate)
         {

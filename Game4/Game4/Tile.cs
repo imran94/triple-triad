@@ -22,7 +22,7 @@ namespace Game4
 
         //public Tile All { get { return this; } }
 
-        private Color color, neutral = Color.Gray, hover = Color.Red, marked = Color.Blue;
+        private Color color, neutral = Color.Transparent, hover = Color.Red, marked = Color.Blue;
 
         public Tile() { }
 

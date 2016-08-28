@@ -15,10 +15,12 @@ namespace Game4
     class Card
     {
         private Texture2D sprite;
+        private string spriteAsset;
+
+        private Texture2D[] cardVal = new Texture2D[9];
 
         private int north, south, east, west;
 
-        private SpriteBatch spriteBatch;
         private SpriteFont font;
         private Vector2 fontPos;
 
@@ -36,11 +38,11 @@ namespace Game4
         private bool dealt;
         public bool Dealt { get { return dealt; } set { dealt = value; } }
 
-        private const int width = 100;
-        private const int height = 100;
+        private const int width = 150;
+        private const int height = 200;
 
-        private Color color, neutral = Color.Gray, hover = Color.Red, marked = Color.Blue, played = Color.Green;
-        //private int initX, initY;
+        private Color color, neutral = Color.White, hover = Color.Red, marked = Color.Blue, played = Color.Green;
+
         
         public Card() { }
 
@@ -61,7 +63,7 @@ namespace Game4
             color = neutral;
         }
 
-        public Card(int id, bool selectable, int x, int y, int n, int s, int e, int w)
+        public Card(int player, int id, bool selectable, int x, int y, int n, int s, int e, int w)
         {
             this.id = id;
             this.selectable = selectable;
@@ -75,6 +77,11 @@ namespace Game4
             rectangle.Height = height;
             dealt = false;
 
+            if (player > 0)
+                spriteAsset = "card_blue";
+            else if (player < 0)
+                spriteAsset = "card_orange";
+
             selected = false;
             color = neutral;
         }
@@ -84,14 +91,24 @@ namespace Game4
 
         public virtual void LoadContent(ContentManager content, Texture2D texture)
         {
-            sprite = texture;
+            //sprite = texture;
+            sprite = content.Load<Texture2D>("_sprite\\" + spriteAsset);
+            
             font = content.Load<SpriteFont>("Arial");
             fontPos = new Vector2();
+
+            for(int i=0;i<9;i++)
+            {
+                cardVal[i] = content.Load<Texture2D>("_sprite\\cardVal_"+(i+1).ToString());
+            }
         }
         
         public void Unload()
         {
             sprite.Dispose();
+
+            foreach (Texture2D t in cardVal)
+                t.Dispose();
         }
 
         MouseState mouse;
@@ -146,16 +163,22 @@ namespace Game4
             //spriteBatch.Begin();
                 spriteBatch.Draw(sprite, rectangle, color);
 
+                int numW = 36, numH = 40, numOffX = 38, numOffY = 56;
+                spriteBatch.Draw(cardVal[north - 1], new Rectangle(width / 2 - numW / 2 + rectangle.X, height / 2 - numH / 2 - numOffY + rectangle.Y, numW, numH), neutral);
+                spriteBatch.Draw(cardVal[south - 1], new Rectangle(width / 2 - numW / 2 + rectangle.X, height / 2 - numH / 2 + numOffY + rectangle.Y, numW, numH), neutral);
+                spriteBatch.Draw(cardVal[east - 1], new Rectangle(width / 2 - numW / 2 + numOffX + rectangle.X, height / 2 - numH / 2 + rectangle.Y, numW, numH), neutral);
+                spriteBatch.Draw(cardVal[west - 1], new Rectangle(width / 2 - numW / 2 - numOffX + rectangle.X, height / 2 - numH / 2 + rectangle.Y, numW, numH), neutral);
+                /*
                 spriteBatch.DrawString(font, north.ToString(), fontPos, Color.Black);
                 fontPos.Y += rectangle.Height - 20;
                 spriteBatch.DrawString(font, south.ToString(), fontPos, Color.Black);
-
                 fontPos.X = rectangle.X;
-                fontPos.Y = rectangle.Y + rectangle.Height / 2;
+                    fontPos.Y = rectangle.Y + rectangle.Height / 2;
 
                 spriteBatch.DrawString(font, west.ToString(), fontPos, Color.Black);
                 fontPos.X += rectangle.Width - 20;
                 spriteBatch.DrawString(font, east.ToString(), fontPos, Color.Black);
+                //*/
             //spriteBatch.End();
         }
 

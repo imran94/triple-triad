@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/LENOVO/Documents/GitHub/triple-triad/Game4/Game4/Content/Arial.spritefont</SourceFile>
-  <SourceTime>2016-08-15T21:09:02.9732347+08:00</SourceTime>
+  <SourceTime>2016-08-28T19:01:53.2248973+08:00</SourceTime>
   <DestFile>C:/Users/LENOVO/Documents/GitHub/triple-triad/Game4/Game4/Content/bin/Windows/Arial.xnb</DestFile>
-  <DestTime>2016-08-23T00:02:32.6257783+08:00</DestTime>
+  <DestTime>2016-08-28T19:06:49.9901297+08:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2016-03-30T14:36:08+08:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

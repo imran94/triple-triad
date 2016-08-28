@@ -75,3 +75,15 @@ C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\
 C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\obj\x86\Debug\Game4.csprojResolveAssemblyReference.cache
 C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\obj\x86\Debug\Game4.exe
 C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\obj\x86\Debug\Game4.pdb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\board.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\card_blue.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\card_orange.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_1.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_2.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_3.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_4.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_5.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_6.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_7.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_8.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_9.xnb

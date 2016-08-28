@@ -15,9 +15,15 @@ namespace Game4
         SpriteBatch spriteBatch;
         SpriteFont textFont;
 
+        //Texture2D board;
+        //string boardAsset = "board";
+        Board board;
+
         Vector2 fontPos;
 
         System.Random rnd;
+
+        const int player = 1, bot = -1; //or any other datatype or value as appropriate
 
         public Game1()
         {
@@ -46,8 +52,13 @@ namespace Game4
             graphics.ApplyChanges();
             this.IsMouseVisible = true;
 
+            
+
             w = 150; h = 200;
             int offsetX = 0, offsetY = 10;
+
+            board = new Board(windowW / 2, windowH / 2, offsetX, offsetY);
+
             left = (int)(windowW / 2 - 1.5 * w + offsetX);
             top = (int)(windowH / 2 - 1.5 * h + offsetY);
 
@@ -56,22 +67,13 @@ namespace Game4
 
             rnd = new System.Random();
 
-            /*
-            //temporary values
-            for (int i = 0; i < 3; i++)
-            {
-                playerCards[i] = new Card(true, w, top + i * 105, rnd);
-                compCards[i] = new Card(false, windowW - w, top + i * 105, rnd);
-            }
-            //*/
 
             //generate a 2d array, pass same value to both player and comp cards
-            //rng(ref cardVal);
             CardValueGenerator cardValGen = new CardValueGenerator(ref cardVal, numOfCard);
             for (int i = 0; i < 3; i++)
             {
-                playerCards[i] = new Card(i, true, w, top + i * 105, cardVal[i,0], cardVal[i, 1], cardVal[i, 2], cardVal[i, 3]);
-                compCards[i] = new Card(i, false, windowW - w, top + i * 105, cardVal[i, 0], cardVal[i, 1], cardVal[i, 2], cardVal[i, 3]);
+                playerCards[i] = new Card(player, i, true, w, top + i * 205, cardVal[i,0], cardVal[i, 1], cardVal[i, 2], cardVal[i, 3]);
+                compCards[i] = new Card(bot, i, false, windowW - w*2, top + i * 205, cardVal[i, 0], cardVal[i, 1], cardVal[i, 2], cardVal[i, 3]);
             }
 
 
@@ -93,6 +95,9 @@ namespace Game4
 
             pixel = new Texture2D(GraphicsDevice, 1, 1);
             pixel.SetData(new[] { Color.White });
+            
+
+            board.LoadContent(Content);
 
             foreach (Tile t in tiles)
                 t.LoadContent(pixel);
@@ -107,6 +112,8 @@ namespace Game4
         protected override void UnloadContent()
         {
             spriteBatch.Dispose();
+
+            board.Unload();
 
             foreach (Tile t in tiles)
                 t.Unload();
@@ -138,7 +145,7 @@ namespace Game4
 
                 if (c.Moved)
                 {
-                    Debug.WriteLine("Card moved");
+                    Debug.WriteLine("player moved");
                     nextTurn();
                     c.Moved = false;
                 }
@@ -154,6 +161,9 @@ namespace Game4
                 fontPos.X = w;
                 fontPos.Y = top;
 
+                //spriteBatch.Draw(board, new Rectangle(0,0,460,610) ,Color.White);
+                board.Draw(spriteBatch);
+
                 foreach (Tile t in tiles)
                     t.Draw(spriteBatch);
                 foreach (Card c in playerCards)
@@ -167,15 +177,7 @@ namespace Game4
 
         private void nextTurn()
         {
-            int cardIndex;// = pickCard();
-
-
-            int tileIndex;// = rnd.Next(0, 9);
-            /*
-            while (!tiles[tileIndex].Available)
-            {
-                tileIndex = rnd.Next(0, 9);
-            }//*/
+            int cardIndex, tileIndex;
 
             do
             {

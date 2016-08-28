@@ -38,6 +38,7 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Board.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CardValueGenerator.cs" />
     <Compile Include="Game1.cs" />
