@@ -16,3 +16,5 @@
 *.user #debug settings
 
 /Game4/Game4/bin/Windows/x86/Debug/.
+
+.vs/
