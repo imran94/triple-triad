@@ -49,3 +49,29 @@ C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\
 C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
 C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\Content\Arial.xnb
 C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\obj\x86\Debug\Game4.csprojResolveAssemblyReference.cache
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\Arial.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Game4.exe
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Game4.pdb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\obj\x86\Debug\Game4.csprojResolveAssemblyReference.cache
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\obj\x86\Debug\Game4.exe
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\obj\x86\Debug\Game4.pdb
