@@ -63,7 +63,7 @@ namespace Game4
 
         public Card(int id, bool selectable, int x, int y, int n, int s, int e, int w)
         {
-
+            this.id = id;
             this.selectable = selectable;
             north = n;
             south = s;
