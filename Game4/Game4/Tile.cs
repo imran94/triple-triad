@@ -19,10 +19,12 @@ namespace Game4
             public bool Available { get { return available; } set { available = value; } }
         private Rectangle rectangle;
             public Rectangle Rectangle { get { return rectangle; } set { rectangle = value; } }
+        private Card card;
+            public Card Card { get { return card; } set { card = value; } }
 
         //public Tile All { get { return this; } }
 
-        private Color color, neutral = Color.Gray, hover = Color.Red, marked = Color.Blue;
+        public Color color, colorNeutral = Color.Gray, colorHover = Color.Red, colorMarked = Color.Blue;
 
         public Tile() { }
 
@@ -34,7 +36,8 @@ namespace Game4
             rectangle.Width = w;
             rectangle.Height = h;
 
-            color = neutral;
+            card = null;
+            color = colorNeutral;
         }
 
         public Tile(int id, bool available, int x, int y, int w, int h)
@@ -45,7 +48,7 @@ namespace Game4
             rectangle.Width = w;
             rectangle.Height = h;
 
-            color = neutral;
+            color = colorNeutral;
         }
 
 
@@ -63,35 +66,40 @@ namespace Game4
         MouseState mouse;
         public void Update(ref Rectangle from, ref Rectangle to)
         {
-            mouse = Mouse.GetState();
+            //mouse = Mouse.GetState();
 
-            if (rectangle.Contains(mouse.X, mouse.Y))
-            {
-                color = hover;
-                if (mouse.LeftButton == ButtonState.Pressed && from != Rectangle.Empty) // && available if not checked in game
-                {
-                    //color = marked;
-                    available = false;
-                    to = rectangle;
-                    from = Rectangle.Empty;
+            //if (rectangle.Contains(mouse.X, mouse.Y))
+            //{
+            //    color = colorHover;
+            //    if (mouse.LeftButton == ButtonState.Pressed && from != Rectangle.Empty) // && available if not checked in game
+            //    {
+            //        //color = marked;
+            //        available = false;
+            //        to = rectangle;
+            //        from = Rectangle.Empty;
 
-                    color = neutral;
-                }
-            }
-            else
-            {
-                //if(available) //enable if not checked in game
-                color = neutral;
-            }
+            //        color = colorNeutral;
+            //    }
+            //}
+            //else
+            //{
+            //    //if(available) //enable if not checked in game
+            //    color = colorNeutral;
+            //}
         }
-
-
-
 
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(sprite, rectangle, color);
         }
+
+        public void addCard(ref Card card)
+        {
+            card.move(rectangle);
+            available = false;
+        }
+
+        public bool hasCard() { return card != null; }
 
 
     }//end class========================================================

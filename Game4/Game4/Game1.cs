@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace Game4
@@ -17,6 +18,8 @@ namespace Game4
 
         Vector2 fontPos;
 
+        Deck player = new Player();
+
         System.Random rnd;
 
         public Game1()
@@ -26,8 +29,9 @@ namespace Game4
         }
 
         Tile[] tiles = new Tile[9];
-        Card[] playerCards = new Card[3];
-        Card[] compCards = new Card[3];
+
+        List<Card> playerCards = new List<Card>();
+        List<Card> compCards = new List<Card>();
 
         int windowW, windowH;
         int w, h, top, left;
@@ -70,19 +74,13 @@ namespace Game4
             CardValueGenerator cardValGen = new CardValueGenerator(ref cardVal, numOfCard);
             for (int i = 0; i < 3; i++)
             {
-                playerCards[i] = new Card(i, true, w, top + i * 105, cardVal[i,0], cardVal[i, 1], cardVal[i, 2], cardVal[i, 3]);
-                compCards[i] = new Card(i, false, windowW - w, top + i * 105, cardVal[i, 0], cardVal[i, 1], cardVal[i, 2], cardVal[i, 3]);
+                playerCards.Add(new Card(i, true, w, top + i * 105, cardVal[i,0], cardVal[i, 1], cardVal[i, 2], cardVal[i, 3]));
+                compCards.Add(new Card(i * 10, false, windowW - w, top + i * 105, cardVal[i, 0], cardVal[i, 1], cardVal[i, 2], cardVal[i, 3]));
             }
-
-
-
-
 
             base.Initialize();
         }
         //end init==============================================================================
-
-
 
         Texture2D pixel;
         protected override void LoadContent()
@@ -136,13 +134,16 @@ namespace Game4
                 if (c.Selectable) //update might be more taxing than just checking just if tile is available
                     c.Update(ref from, ref to);
 
-                if (c.Moved)
+                if (c.Dealt)
                 {
                     Debug.WriteLine("Card moved");
                     nextTurn();
-                    c.Moved = false;
+                    c.Dealt = false;
                 }
             }
+
+            player.Update(ref playerCards, ref compCards, ref tiles);
+
             base.Update(gameTime);
         }
         
@@ -177,30 +178,28 @@ namespace Game4
                 tileIndex = rnd.Next(0, 9);
             }//*/
 
-            do
-            {
-                cardIndex = rnd.Next(0, numOfCard);
-            }
-            while (compCards[cardIndex].Dealt);
-            compCards[cardIndex].Dealt = true;
-
-            do
-            {
-                tileIndex = rnd.Next(0, 9);
-            }
-            while (!tiles[tileIndex].Available);
-            tiles[tileIndex].Available = false;
+            //do
+            //{
+            //    cardIndex = rnd.Next(0, numOfCard);
+            //} while (compCards[cardIndex].Dealt);
+            //compCards[cardIndex].Dealt = true;
+            
+            //do
+            //{
+            //    tileIndex = rnd.Next(0, 9);
+            //} while (!tiles[tileIndex].Available);
+            //tiles[tileIndex].Available = false;
 
             //Card selectedCard = compCards[cardIndex];
             //Tile selectedTile = tiles[tileIndex];
 
             //from = selectedCard.Rectangle;
-            to = tiles[tileIndex].Rectangle;
-            compCards[cardIndex].move(to);
-            compCards[cardIndex].Selectable = false;
+            //to = tiles[tileIndex].Rectangle;
+            //compCards[cardIndex].move(to);
+            //compCards[cardIndex].Selectable = false;
 
-            Debug.WriteLine("cardIndex: " + cardIndex);
-            Debug.WriteLine("tileIndex: " + tileIndex);
+            //Debug.WriteLine("cardIndex: " + cardIndex);
+            //Debug.WriteLine("tileIndex: " + tileIndex);
         }
 
         /*
