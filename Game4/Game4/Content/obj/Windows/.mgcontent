@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/_sprite/board.png</File>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/_sprite/card_blue.png</File>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/_sprite/card_orange.png</File>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/_sprite/cardVal_1.png</File>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/_sprite/cardVal_2.png</File>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/_sprite/cardVal_3.png</File>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/_sprite/cardVal_4.png</File>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/_sprite/cardVal_5.png</File>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/_sprite/cardVal_6.png</File>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/_sprite/cardVal_7.png</File>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/_sprite/cardVal_8.png</File>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/_sprite/cardVal_9.png</File>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/_sprite/card_blank.png</File>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/Arial.spritefont</File>
+    <File>C:/Users/LENOVO/Desktop/triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2/Game4/Game4/Content/Times New Roman.spritefont</File>
+  </SourceFiles>
+</SourceFileCollection>

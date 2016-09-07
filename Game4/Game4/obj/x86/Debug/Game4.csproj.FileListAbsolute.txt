@@ -1,0 +1,205 @@
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\Game4.exe
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\Game4.pdb
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\obj\x86\Debug\Game4.csprojResolveAssemblyReference.cache
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\obj\x86\Debug\Game4.exe
+C:\Users\LENOVO\Desktop\_test\Game4\Game4\obj\x86\Debug\Game4.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\obj\x86\Debug\Game4.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\obj\x86\Debug\Game4.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\Game4.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\Game4.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\bin\Windows\x86\Debug\Content\Arial.xnb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\Triple Triad\Game4\Game4\obj\x86\Debug\Game4.csprojResolveAssemblyReference.cache
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\Arial.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Game4.exe
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Game4.pdb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\obj\x86\Debug\Game4.csprojResolveAssemblyReference.cache
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\obj\x86\Debug\Game4.exe
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\obj\x86\Debug\Game4.pdb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\board.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\card_blue.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\card_orange.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_1.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_2.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_3.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_4.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_5.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_6.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_7.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_8.xnb
+C:\Users\LENOVO\Documents\GitHub\triple-triad\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_9.xnb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\obj\x86\Debug\Game4.exe
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\obj\x86\Debug\Game4.pdb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Content\Arial.xnb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\board.xnb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_1.xnb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_2.xnb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_3.xnb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_4.xnb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_5.xnb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_6.xnb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_7.xnb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_8.xnb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_9.xnb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\card_blue.xnb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\card_orange.xnb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Game4.exe
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\Game4.pdb
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\alvinCkx\Desktop\triple-triad-kjfgdfkjngkj\Game4\Game4\obj\x86\Debug\Game4.csprojResolveAssemblyReference.cache
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\obj\x86\Debug\Game4.exe
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\obj\x86\Debug\Game4.pdb
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\board.xnb
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_1.xnb
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_2.xnb
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_3.xnb
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_4.xnb
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_5.xnb
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_6.xnb
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_7.xnb
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_8.xnb
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_9.xnb
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\card_blue.xnb
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\card_orange.xnb
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Game4.exe
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Game4.pdb
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\obj\x86\Debug\Game4.csprojResolveAssemblyReference.cache
+C:\Users\alvinCkx\Desktop\cardMine\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\card_blank.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\obj\x86\Debug\Game4.exe
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\obj\x86\Debug\Game4.pdb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\Arial.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\Times New Roman.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\board.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_1.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_2.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_3.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_4.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_5.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_6.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_7.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_8.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\cardVal_9.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\card_blank.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\card_blue.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Content\_sprite\card_orange.xnb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Game4.exe
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\Game4.pdb
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\LENOVO\Desktop\triple-triad-426b9303e5d55ec6c2c5ad8c458d85d0e1f1b0a2\Game4\Game4\obj\x86\Debug\Game4.csprojResolveAssemblyReference.cache
