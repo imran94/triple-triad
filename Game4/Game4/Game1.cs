@@ -91,13 +91,8 @@ namespace Game4
 
             spriteBatch.Begin();
             gui.Draw(spriteBatch);
-<<<<<<< HEAD
             //spriteBatch.DrawString(font, endText, fontPos, Color.Black);
             //spriteBatch.DrawString(font, "PRESS R KEY TO RESTART", fontPos2, Color.Black);
-=======
-            spriteBatch.DrawString(font, endText, fontPos, Color.Black);
-            spriteBatch.DrawString(font, "PRESS R KEY TO RESTART", fontPos2, Color.Black);
->>>>>>> origin/lettuce
             spriteBatch.End();
 
             base.Draw(gameTime);
@@ -205,30 +200,9 @@ namespace Game4
 
         private void restart()
         {
-<<<<<<< HEAD
             Program.restart = true;
             this.Exit();
-=======
-            endText = "";
-            count = 0;
 
-            turn = startGame();
-
-            foreach (Tile t in tiles)
-                t.Reset();
-
-            CardValueGenerator cardValGen = new CardValueGenerator(ref cardVal, NUM_OF_CARD);
-            for (int i = 0; i < NUM_OF_CARD; i++)
-            {
-                cards_player[i].Reset((int)Enum.Player.Human, cardVal[i, (int)Enum.CardSide.N], cardVal[i, (int)Enum.CardSide.S], cardVal[i, (int)Enum.CardSide.E], cardVal[i, (int)Enum.CardSide.W]);
-                cards_bot[i].Reset((int)Enum.CardState.Rest, cardVal[i, (int)Enum.CardSide.N], cardVal[i, (int)Enum.CardSide.S], cardVal[i, (int)Enum.CardSide.E], cardVal[i, (int)Enum.CardSide.W]);
-            }
-
-            human.Reset(ref cards_player, ref tiles);
-            bot.Reset(ref cards_bot, ref tiles);
-
-            gui.Reset(ref tiles, ref cards_player, ref cards_bot);
->>>>>>> origin/lettuce
         }
 
 
