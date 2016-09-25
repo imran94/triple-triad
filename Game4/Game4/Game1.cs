@@ -131,19 +131,13 @@ namespace Game4
                 switch (turn)
                 {
                     case (int)Enum.Player.Human:
-                        {
                             swap = human.Update();
                             break;
-                        }
                     case (int)Enum.Player.Bot:
-                        {
                             swap = bot.Update();
                             break;
-                        }
                     default:
-                        {
                             break;
-                        }
                 }
             }
             else
@@ -187,6 +181,7 @@ namespace Game4
             else
                 rng = (int)Enum.Player.Bot;
 
+            Control.Score = 0;
             Control.Score += -1 * rng; //score is biased away from P1 because P1 has 1 extra turn by default
             //Debug.WriteLine(Control.Score);
             return rng ;
