@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,8 +12,6 @@ namespace Game4
 {
     class Bot : Control
     {
-        //responsible for the artificially intelligent
-
         private Random random = new Random();
         private Card[] cards_opponent; //for evaluation? discard if useless
 
@@ -28,8 +27,6 @@ namespace Game4
             this.decision = decision;
 
             cardCount_bot = cards.Length;
-            
-
         }//end constructor====================================================================
 
         public override void Reset(ref Card[] cards, ref Tile[] _tiles)
@@ -45,7 +42,6 @@ namespace Game4
 
         private const float delay = 1f;
         private float remainingDelay = delay;
-        private bool countdown = false;
 
         //begin update=================================================
         public override bool Update(GameTime gameTime)
@@ -103,23 +99,8 @@ namespace Game4
                 //Debug.WriteLine(score + " thus bot : " + decision + "\n====================");
 
             return true;
-
-
         }//end update=================================================
-        //==================================================================================
-        //==================================================================================
-
-
-
-
-
-
-
-
-
-
-        //==================================================================================
-        //==================================================================================
+        
         //begin random AI====================================================================
         private void decideRandom()
         {
@@ -138,16 +119,8 @@ namespace Game4
             tile = tiles[tileID];
 
         }//end random AI====================================================================
-        //==================================================================================
-        //==================================================================================
 
-        
-
-        //==================================================================================
-        //==================================================================================
         //begin basic AI====================================================================
-
-
         private void decide(int mode)
         {
             //*
@@ -166,13 +139,11 @@ namespace Game4
                     tempDeal = pt.BestDeal;
                     card = cards[pt.BestCardID];
                     tile = tiles[pt.ID];
+
+                    cardPick.Play();
                 }
             }//*/
-
-
-
-
-
+            
             /*/ for displaying best best card and value on console
             for (int i = 0; i < 9; i++)
             {
@@ -184,19 +155,7 @@ namespace Game4
                 if (i == 8) Debug.WriteLine("===================");
             }//*/
         }
-
-
-
-        
-        
-        
-        
-        
-        
         //end AI====================================================================
-        //==================================================================================
-        //==================================================================================
-
         
         private int[] sumThreat = { 0, 0, 0, 0 };
         private int[] threatMax = { 1, 1, 1, 1 };

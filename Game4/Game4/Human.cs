@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,9 +12,6 @@ namespace Game4
 {
     class Human : Control
     {
-
-        //responsible for handling mouse event by human
-
         MouseState mouse;
         public Human(ref Card[] cards, ref Tile[] tiles) : base(ref cards, ref tiles)
         {
@@ -27,10 +25,16 @@ namespace Game4
             base.Reset(ref cards, ref _tiles);
         }
 
+        private const float clickDelay = 1f;
+        private float remainingDelay = clickDelay;
+
         //begin update=================================================
         public override bool Update(GameTime gameTime)
         {
             mouse = Mouse.GetState();
+
+            float timer = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            remainingDelay -= timer;
 
             foreach (Tile t in tiles)
             {
@@ -41,12 +45,10 @@ namespace Game4
                         t.State = (int)Enum.TileState.Hover;
                         if (mouse.LeftButton == ButtonState.Pressed)
                         {
-                            Debug.WriteLine("Clicked");
                             tile = t;
                             tile.State = (int)Enum.TileState.Selected;
                             if (card != null)
                             {
-                                Debug.WriteLine("Card != null");
                                 moveCard();
                                 return true;
                             }
@@ -69,7 +71,7 @@ namespace Game4
                     {
                         if (c.State == (int)Enum.CardState.Rest) //if card is at rest
                             c.State = (int)Enum.CardState.Hover; //then card is hover
-                        else if (mouse.LeftButton == ButtonState.Pressed) //else if left click
+                        else if (mouse.LeftButton == ButtonState.Pressed && remainingDelay <= 0) //else if left click
                         {
                             if (card != null && c.ID != card.ID) //if card was selected and not currently clicking
                             {
@@ -78,6 +80,9 @@ namespace Game4
                             }
                             card = c; //remember this card
                             card.State = (int)Enum.CardState.Selected; //change state of selected card
+                            cardPick.Play();
+
+                            remainingDelay = clickDelay;
                         }
                     }
                     else //mouse doesn't contact card
@@ -103,15 +108,6 @@ namespace Game4
                 c.Update();
             }
             return false;
-
-
         }//end update=================================================
-
-
-
-
-
-
-
     }//end class
 }//end namespace

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
 using System;
 using System.Diagnostics;
 
@@ -32,15 +33,17 @@ namespace Game4
         static Card[] cards_player = new Card[NUM_OF_CARD];
         static Card[] cards_bot = new Card[NUM_OF_CARD];
 
-
         private int[,] cardVal = new int[NUM_OF_CARD, NUM_OF_SIDE];
         private int turn;
+
+        Control human = new Human(ref cards_player, ref tiles);
+        //Control bot = new Human(ref cards_bot, ref tiles);
+        Control bot = new Bot(ref cards_bot, ref tiles, ref cards_player);
 
 
         //init==============================================================================
         protected override void Initialize()
         {
-
             for (int i = 0; i < NUM_OF_TILE; i++)
                 tiles[i] = new Tile(i);
 
@@ -67,9 +70,8 @@ namespace Game4
         }
         //end init==============================================================================
 
-
-
         Texture2D pixel;
+        SoundEffect win, lose;
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -77,6 +79,11 @@ namespace Game4
             pixel.SetData(new[] { Color.White });
             
             gui.LoadContent(Content, pixel);
+            human.LoadContent(Content);
+            bot.LoadContent(Content);
+
+            win = Content.Load<SoundEffect>("audio\\win");
+            lose = Content.Load<SoundEffect>("audio\\lose");
         }
 
         protected override void UnloadContent()
@@ -97,28 +104,11 @@ namespace Game4
 
             base.Draw(gameTime);
         }
-
-
-
-
-
-
-
-
-
-
-
+        
         //begin update=============================================================
-
-        Control human = new Human(ref cards_player, ref tiles);
-        //Control bot = new Human(ref cards_bot, ref tiles);
-        Control bot = new Bot(ref cards_bot, ref tiles, ref cards_player);
-
         bool swap = false;
+        bool gameResult = false;
         int count = 0;
-
-
-        bool countdown = false;
 
         protected override void Update(GameTime gameTime)
         {
@@ -142,22 +132,25 @@ namespace Game4
                             break;
                 }
             }
-            else
+            else if (!gameResult)
             {
                 if (Control.Score > 0)
                 {
                     gui.EndText = "YOU WIN, PRESS ENTER TO RESTART";
+                    win.Play();
                 }
                 else if (Control.Score < 0)
                 {
                     gui.EndText = "YOU LOSE, PRESS ENTER TO RESTART";
+                    lose.Play();
                 }
                 else
                 {
                     gui.EndText = "DRAW, PRESS ENTER TO RESTART";
                 }
-            }
 
+                gameResult = true;
+            }
 
             if (swap)
             {
@@ -169,12 +162,9 @@ namespace Game4
             base.Update(gameTime);
         }//end update=============================================================
 
-
-
         private int startGame()
         {
             //set turn and consequently initial score
-
             Random random = new Random();
             int rng = random.Next(0,2);
 
@@ -199,37 +189,7 @@ namespace Game4
         {
             Program.restart = true;
             this.Exit();
-
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
-
-
-
-
-
-
     }//end class========================================================
 }//end namespace========================================================
 

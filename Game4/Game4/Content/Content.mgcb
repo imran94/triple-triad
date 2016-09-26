@@ -181,3 +181,33 @@
 /processorParam:TextureFormat=Compressed
 /build:Times New Roman.spritefont
 
+#begin audio/cardCapture.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:audio/cardCapture.ogg
+
+#begin audio/cardPick.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:audio/cardPick.ogg
+
+#begin audio/cardPlace.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:audio/cardPlace.ogg
+
+#begin audio/lose.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:audio/lose.ogg
+
+#begin audio/win.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:audio/win.ogg
+

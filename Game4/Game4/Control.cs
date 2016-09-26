@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -43,6 +45,15 @@ namespace Game4
             }
         }
 
+        protected SoundEffect cardPick, cardPlace, cardCapture;
+
+        public virtual void LoadContent(ContentManager content)
+        {
+            cardPick = content.Load<SoundEffect>("audio\\cardPick");
+            cardPlace = content.Load<SoundEffect>("audio\\cardPlace");
+            cardCapture = content.Load<SoundEffect>("audio\\cardCapture");
+        }
+
         public virtual void Reset(ref Card[] cards, ref Tile[] _tiles)
         {
             this.cards = cards;
@@ -73,34 +84,26 @@ namespace Game4
             tryCapture();
 
             pTiles[lastOccupiedTileID].Exclude = true;
-            
 
             if (card.Player == (int)Enum.Player.Human)
                 cardCount_player--;
             else //if (card.Player == (int)Enum.Player.Bot)
                 cardCount_bot--;
 
-
-
             setPTileAdjacent(); //sets open sides & threat multiplier
             setPTileEach(); //sets pTile gain and waste per side
-            
-
 
             reset();
 
             //Debug.WriteLine(lastDealtCardID + " on " + lastOccupiedTileID);
             //Debug.WriteLine(score);
-
-
-
-            
         }
 
         private void setCard()
         {
             //wrote as separate function in case this is handled differently
             tile.Card = card;
+            cardPlace.Play();
         }
 
         private void reset()
@@ -111,7 +114,6 @@ namespace Game4
             tile.State = (int)Enum.TileState.Occupied;
             tile = null;
         }
-
 
         //start try to capture=========================================================================================
         //public enum TargetDirection : int { Up = -3, Down = +3, Left = -1, Right = +1 }
@@ -128,6 +130,7 @@ namespace Game4
                 if (capture((int)Enum.TargetDirection.Up))
                 {
                     score += card.Player;
+                    cardCapture.Play();
                 }
             }
             if (tile.ID < 6)
@@ -135,6 +138,7 @@ namespace Game4
                 if (capture((int)Enum.TargetDirection.Down))
                 {
                     score += card.Player;
+                    cardCapture.Play();
                 }
             }
             if (tile.ID % 3 > 0)
@@ -142,6 +146,7 @@ namespace Game4
                 if (capture((int)Enum.TargetDirection.Left))
                 {
                     score += card.Player;
+                    cardCapture.Play();
                 }
             }
             if (tile.ID % 3 < 2)
@@ -149,6 +154,7 @@ namespace Game4
                 if (capture((int)Enum.TargetDirection.Right))
                 {
                     score += card.Player;
+                    cardCapture.Play();
                 }
             }
         } //end try to capture====================================================================
