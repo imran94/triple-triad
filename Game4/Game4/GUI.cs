@@ -72,6 +72,7 @@ namespace Game4
             }
         }
 
+        /*
         public void Reset(ref Tile[] tiles, ref Card[] cards_player, ref Card[] cards_bot)
         {
             this.tiles = tiles;
@@ -94,7 +95,7 @@ namespace Game4
                     cards_bot[i].Rectangle = new Rectangle(width - cardOffset - tileWidth * 2, tileHeight / 2 + boardTop + i % 3 * tileHeight, tileWidth, tileHeight);
                 }
             }
-        }
+        }//*/
 
         public void LoadContent(ContentManager content, Texture2D pixel)
         {

@@ -13,7 +13,7 @@ namespace Game4
         private int[] sumCol = { 0, 0, 0, 0 };
 
         //set lower and upper limit for the sum of values of cards
-        private readonly int[] limLw = { 1, 4, 9, 15, 22 };
+        private readonly int[] limLw = { 1, 4, 10, 17, 25 };
         private readonly int[] limUp = { 9, 17, 23, 27, 29 };
 
         private int lw, up, rng;
@@ -36,12 +36,16 @@ namespace Game4
                     lw = Math.Max(1, Math.Max(limLw[j] - sumRow, limLw[i] - sumCol[j]));
                     up = Math.Min(9, Math.Min(limUp[j] - sumRow, limUp[i] - sumCol[j]));
 
+                    //*
                     if (up <= lw)
                     {//contingency fix
-                        j--;
-                        break;
+                        //j--;
+                        //continue;
+                        rng = 1;
                     }
-                    rng = random.Next(lw, up+1);
+                    //*/
+                    else
+                        rng = random.Next(lw, up+1);
                     if (rng < 1) rng = 1; //contingency fix 2
                     if (rng > 9) rng = 9;
                     //rng = up; //force lower|upper limit via lw|up, for debugging purpose only
@@ -49,12 +53,12 @@ namespace Game4
                     sumCol[j] += rng;
                     cardVal[i, j] = rng;
 
-                    if (j < 3) Debug.Write(cardVal[i, j] + ","); else Debug.WriteLine(cardVal[i, j] + ",");
+                    //if (j < 3) Debug.Write(cardVal[i, j] + ","); else Debug.WriteLine(cardVal[i, j] + ",");
                 }
             }
-            Debug.WriteLine("============================================\n");
+            //Debug.WriteLine("////////////==\n");
         }
 
 
-    }//end class========================================================
-}//end namespace========================================================
+    }//end class////////////////
+}//end namespace////////////////

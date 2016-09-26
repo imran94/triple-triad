@@ -19,9 +19,9 @@ namespace Game4
 
 
         protected Card[] cards;
-        static protected Card card;
-        static protected Tile[] tiles;
-        static protected Tile tile;
+        static protected Card card = null;
+        static protected Tile[] tiles = null;
+        static protected Tile tile = null;
 
         
 
@@ -33,6 +33,7 @@ namespace Game4
 
         public Control(ref Card[] cards, ref Tile[] _tiles)
         {
+            score = 0;
             this.cards = cards;
             tiles = _tiles;
 
@@ -94,9 +95,6 @@ namespace Game4
             setPTileEach(); //sets pTile gain and waste per side
 
             reset();
-
-            //Debug.WriteLine(lastDealtCardID + " on " + lastOccupiedTileID);
-            //Debug.WriteLine(score);
         }
 
         private void setCard()
@@ -115,7 +113,7 @@ namespace Game4
             tile = null;
         }
 
-        //start try to capture=========================================================================================
+        //start try to capture////////////////////////=====
         //public enum TargetDirection : int { Up = -3, Down = +3, Left = -1, Right = +1 }
         private void tryCapture()
         {
@@ -157,7 +155,7 @@ namespace Game4
                     cardCapture.Play();
                 }
             }
-        } //end try to capture====================================================================
+        } //end try to capture//////////////////=====
 
         
         private bool capture(int idx_shift)
@@ -206,7 +204,7 @@ namespace Game4
                 }
             }
             return false;
-        } //end capture======================================================================================
+        } //end capture////////////////////////==
 
 
 
@@ -324,11 +322,11 @@ namespace Game4
 
                     if (tiles[i + (int)Enum.TargetDirection.Down].Card != null && tiles[i + (int)Enum.TargetDirection.Down].Card.Player == (int)Enum.Player.Human)
                     {
-                        pTiles[i].ChallengeSouth = tiles[i + (int)Enum.TargetDirection.Down].Card.North; //set challenge north
+                        pTiles[i].ChallengeSouth = tiles[i + (int)Enum.TargetDirection.Down].Card.North; //set challenge 
                     }
                     else
                     {
-                        pTiles[i].ChallengeSouth = 0; //reset challenge north
+                        pTiles[i].ChallengeSouth = 0; //reset challenge 
                     }
 
 
@@ -359,11 +357,11 @@ namespace Game4
 
                     if (tiles[i + (int)Enum.TargetDirection.Left].Card != null && tiles[i + (int)Enum.TargetDirection.Left].Card.Player == (int)Enum.Player.Human) //if tile above has card and is human's
                     {
-                        pTiles[i].ChallengeWest = tiles[i + (int)Enum.TargetDirection.Left].Card.East; //set challenge north
+                        pTiles[i].ChallengeWest = tiles[i + (int)Enum.TargetDirection.Left].Card.East; //set challenge 
                     }
                     else
                     {
-                        pTiles[i].ChallengeWest = 0; //reset challenge north
+                        pTiles[i].ChallengeWest = 0; //reset challenge 
                     }
 
                     if (tiles[i].Card != null)
@@ -393,11 +391,11 @@ namespace Game4
 
                     if (tiles[i + (int)Enum.TargetDirection.Right].Card != null && tiles[i + (int)Enum.TargetDirection.Right].Card.Player == (int)Enum.Player.Human) //if tile above has card and is human's
                     {
-                        pTiles[i].ChallengeEast = tiles[i + (int)Enum.TargetDirection.Right].Card.West; //set challenge north
+                        pTiles[i].ChallengeEast = tiles[i + (int)Enum.TargetDirection.Right].Card.West; //set challenge 
                     }
                     else
                     {
-                        pTiles[i].ChallengeEast = 0; //reset challenge north
+                        pTiles[i].ChallengeEast = 0; //reset challenge 
                     }
 
                     if (tiles[i].Card != null)

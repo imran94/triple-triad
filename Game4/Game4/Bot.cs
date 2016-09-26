@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Game4
@@ -27,7 +28,7 @@ namespace Game4
             this.decision = decision;
 
             cardCount_bot = cards.Length;
-        }//end constructor====================================================================
+        }//end constructor//////////////////=====
 
         public override void Reset(ref Card[] cards, ref Tile[] _tiles)
         {
@@ -56,12 +57,12 @@ namespace Game4
 
             if (!initialised)
                 threatInit();
-
+            //*
             if (score > (int)Enum.Player.Human)
                 decision = (int)Enum.BotDecision.Offense;
             else if (score < (int)Enum.Player.Bot)
                 decision = (int)Enum.BotDecision.Defense;
-            else
+            else//*/
                 decision = (int)Enum.BotDecision.Basic;
 
             //Debug.WriteLine(score + " thus bot : " +decision);
@@ -93,15 +94,17 @@ namespace Game4
                         }
 
                 }
+
+                
                 moveCard();
 
-                //Debug.WriteLine("=====>" + lastDealtCardID + " on " + lastOccupiedTileID + "===========");
-                //Debug.WriteLine(score + " thus bot : " + decision + "\n====================");
+                //Debug.WriteLine("=====>" + lastDealtCardID + " on " + lastOccupiedTileID + "//====");
+                //Debug.WriteLine(score + " thus bot : " + decision + "\n////======");
 
             return true;
-        }//end update=================================================
-        
-        //begin random AI====================================================================
+        }//end update//////////////
+
+        //begin random AI//////////////////=====
         private void decideRandom()
         {
             int cardID, tileID;
@@ -118,9 +121,9 @@ namespace Game4
             card = cards[cardID];
             tile = tiles[tileID];
 
-        }//end random AI====================================================================
+        }//end random AI//////////////////=====
 
-        //begin basic AI====================================================================
+        //begin basic AI//////////////////=====
         private void decide(int mode)
         {
             //*
@@ -143,7 +146,6 @@ namespace Game4
                     cardPick.Play();
                 }
             }//*/
-            
             /*/ for displaying best best card and value on console
             for (int i = 0; i < 9; i++)
             {
@@ -152,10 +154,9 @@ namespace Game4
                     Debug.WriteLine(i + "::" + pTiles[i].BestCardID + " => " + pTiles[i].BestDeal);
 
                 }
-                if (i == 8) Debug.WriteLine("===================");
+                if (i == 8) Debug.WriteLine("////=====");
             }//*/
         }
-        //end AI====================================================================
         
         private int[] sumThreat = { 0, 0, 0, 0 };
         private int[] threatMax = { 1, 1, 1, 1 };
@@ -203,7 +204,7 @@ namespace Game4
 
 
 
-        //DEBUG for days!=======================================
+        //DEBUG for days!//////////====
         protected void printTileThreatMultiplier()
         {//*
             Debug.WriteLine("\ntile threat multiplier");

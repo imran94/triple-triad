@@ -129,7 +129,7 @@ namespace Game4
             spriteBatch.Draw(cardVal[west - 1], new Rectangle(width / 2 - numW / 2 - offsetX + rectangle.X, height / 2 - numH / 2 + rectangle.Y, numW, numH), col_rest);
         }
 
-        //begin update================================================================
+        //begin update//////////////////=
         public virtual void Update() 
         {
             //updates the appearance based on state, display handled by GUI, logics handled by Control
@@ -168,11 +168,11 @@ namespace Game4
                 if (player == (int)Enum.Player.Bot)
                     color = col_bot;
             }
-        }//end update================================================================
+        }//end update//////////////////=
 
 
         
 
 
-    }//end class========================================================
-}//end namespace========================================================
+    }//end class////////////////
+}//end namespace////////////////

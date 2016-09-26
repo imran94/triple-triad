@@ -21,10 +21,10 @@ namespace Game4
             Content.RootDirectory = "Content";
         }
 
-        //======================================================================================
-        //======================================================================================
-        //begin ================================================================================
-        //======================================================================================
+        //////////////////////////==
+        //////////////////////////==
+        //begin //////////////////////===
+        //////////////////////////==
 
         GUI gui;
 
@@ -41,7 +41,7 @@ namespace Game4
         Control bot = new Bot(ref cards_bot, ref tiles, ref cards_player);
 
 
-        //init==============================================================================
+        //init//////////////////////=
         protected override void Initialize()
         {
             for (int i = 0; i < NUM_OF_TILE; i++)
@@ -68,7 +68,7 @@ namespace Game4
 
             base.Initialize();
         }
-        //end init==============================================================================
+        //end init//////////////////////=
 
         Texture2D pixel;
         SoundEffect win, lose;
@@ -98,14 +98,11 @@ namespace Game4
 
             spriteBatch.Begin();
             gui.Draw(spriteBatch);
-            //spriteBatch.DrawString(font, endText, fontPos, Color.Black);
-            //spriteBatch.DrawString(font, "PRESS R KEY TO RESTART", fontPos2, Color.Black);
             spriteBatch.End();
 
             base.Draw(gameTime);
         }
-        
-        //begin update=============================================================
+
         bool swap = false;
         bool gameResult = false;
         int count = 0;
@@ -160,7 +157,7 @@ namespace Game4
 
             gui.Update();
             base.Update(gameTime);
-        }//end update=============================================================
+        }//end update////////////////=====
 
         private int startGame()
         {
@@ -192,17 +189,3 @@ namespace Game4
         }
     }//end class========================================================
 }//end namespace========================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
