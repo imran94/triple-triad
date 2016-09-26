@@ -118,6 +118,8 @@ namespace Game4
         int count = 0;
 
 
+        bool countdown = false;
+
         protected override void Update(GameTime gameTime)
         {
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
@@ -131,10 +133,10 @@ namespace Game4
                 switch (turn)
                 {
                     case (int)Enum.Player.Human:
-                            swap = human.Update();
+                            swap = human.Update(gameTime);
                             break;
                     case (int)Enum.Player.Bot:
-                            swap = bot.Update();
+                            swap = bot.Update(gameTime);
                             break;
                     default:
                             break;

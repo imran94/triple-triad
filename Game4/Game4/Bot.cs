@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Input;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -42,9 +43,21 @@ namespace Game4
             base.Reset(ref cards, ref _tiles);
         }
 
+        private const float delay = 1f;
+        private float remainingDelay = delay;
+        private bool countdown = false;
+
         //begin update=================================================
-        public override bool Update()
+        public override bool Update(GameTime gameTime)
         {
+            float timer = (float) gameTime.ElapsedGameTime.TotalSeconds;
+            remainingDelay -= timer;
+
+            if (remainingDelay > 0)
+                return false;
+
+            remainingDelay = delay;
+
             if (!initialised)
                 threatInit();
 

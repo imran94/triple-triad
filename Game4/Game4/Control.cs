@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Input;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -56,7 +57,7 @@ namespace Game4
             }
         }
 
-        public abstract bool Update();
+        public abstract bool Update(GameTime gameTime);
 
         protected void moveCard()
         {
