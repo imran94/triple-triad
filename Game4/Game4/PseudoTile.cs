@@ -32,9 +32,10 @@ namespace Game4
             public int ThreatMultiplier { get { return threatMultiplier; } set { threatMultiplier = value; } }
 
         private float threatNorth = 0, threatSouth = 0, threatEast = 0, threatWest = 0;
-        private int waste = 0, gain = 0;
+        private float waste = 0;
+        private int gain = 0;
         private float threat=0;
-            public int Waste { get { return waste; } }
+            public float Waste { get { return waste; } }
             public int Gain { get { return gain; } }
             public float Threat { get { return threat; } }
 
@@ -85,13 +86,25 @@ namespace Game4
             }
 
             if (id < 3)
-                openNorth = false;
-            else if (id > 5)
+            {
+                openNorth = false; //by default edge is not open, no threat but also no opportunity
+                wasteNorth = 10; //impossible to win over edge, card value N will be wasted
+            }
+            if (id > 5)
+            {
                 openSouth = false;
+                wasteSouth = 10; //impossible to win over edge, card value N will be wasted
+            }
             if (id % 3 < 1)
+            {
                 openWest = false;
-            else if (id % 3 > 1)
+                wasteWest = 10; //impossible to win over edge, card value N will be wasted
+            }
+            if (id % 3 > 1)
+            {
                 openEast = false;
+                wasteEast = 10; //impossible to win over edge, card value N will be wasted
+            }
         }
 
         public void updateThreat(int[] sumThreat, int cardCount_player)
@@ -131,7 +144,7 @@ namespace Game4
         }
 
 
-        private const int CHALLENGED = 10;
+        private const int CHALLENGED = 1;
 
         private int bestCardID = -1;
             public int BestCardID { get{return bestCardID;}}
@@ -144,11 +157,13 @@ namespace Game4
         {
             bestCardID = -1;
             bestDeal = -99999;
+            int challengeCount = 0; //declared here for debugging purpose
             
-
             foreach (Card c in cards)
             {
-                int challengeCount = 0;
+                challengeCount = 0;
+                //waste = 0;
+                //threat = 0.0f;
 
                 if (c.State == (int)Enum.CardState.Rest && !exclude) //if c is still available && ptile is not occupied
                 {
@@ -159,11 +174,13 @@ namespace Game4
 
                     //if card val greater than waste val, waste = card val - waste val
                     //else                                waste = card val
-                    waste = (c.North > wasteNorth ? c.North - wasteNorth : c.North) +
-                           (c.South > wasteSouth ? c.South - wasteSouth : c.South) +
-                           (c.East > wasteEast ? c.East - wasteEast : c.East) +
-                           (c.West > wasteWest ? c.West - wasteWest : c.West) +
-                           deadZone;
+                    waste = (
+                                (c.North > wasteNorth ? c.North - wasteNorth : c.North) +
+                                (c.South > wasteSouth ? c.South - wasteSouth : c.South) +
+                                (c.East > wasteEast ? c.East - wasteEast : c.East) +
+                                (c.West > wasteWest ? c.West - wasteWest : c.West)
+                            );/* / (float)4;/* +
+                           deadZone;//*/
 
                     //Debug.Write((float)waste/remaining + "|");
                     //Debug.Write(waste + "|");
@@ -175,19 +192,23 @@ namespace Game4
                     //if open side cont, else threat at side = 0
                     //cont => if card val > threat val, threat =  card val - threat val
                     //        else                      threat = threat val
-                    threat = (openNorth ? (c.North > threatNorth ? c.North - threatNorth : threatNorth) : 0) +
-                            (openNorth ? (c.South > threatSouth ? c.South - threatSouth : threatSouth) : 0) +
-                            (openNorth ? (c.East > threatEast ? c.East - threatEast  : threatEast) : 0) +
-                            (openNorth ? (c.West > threatWest ? c.West - threatWest : threatWest) : 0);
+                    //averaged to the number of of a card, which also means
+                    //      automatically lesser threat on edges, even lesser in corners
+                    threat = (float)(
+                                (openNorth ? (c.North > threatNorth ? c.North - threatNorth : threatNorth) : 0) +
+                                (openSouth ? (c.South > threatSouth ? c.South - threatSouth : threatSouth) : 0) +
+                                (openEast ? (c.East > threatEast ? c.East - threatEast  : threatEast) : 0) +
+                                (openWest ? (c.West > threatWest ? c.West - threatWest : threatWest) : 0)
+                            ) / (float)4;
 
-                            //(openWest ? c.North - threatWest : 0);
+
                     //gain is the same regardless of any card to be placed
                     //want the most gain possible
 
 
                     //challenge is how many opposing cards can be won with current card
                     //no need breakdown for this calculation
-                    challengeCount += (c.North > challengeNorth ? 1 : 0) +
+                    challengeCount = (c.North > challengeNorth ? 1 : 0) +
                                     (c.South > challengeSouth ? 1 : 0) +
                                     (c.East > challengeEast ? 1 : 0) +
                                     (c.West > challengeWest ? 1 : 0);
@@ -198,8 +219,9 @@ namespace Game4
                     {
                         case (int)Enum.BotDecision.Offense:
                             {
-                                temp = (challengeCount * (float)gain / (float)opponent_remaining + challengeCount * CHALLENGED) * 4
-                                - ((threatMultiplier >= 0 ? threatMultiplier : 0) * threat)
+                                temp =
+                                  (challengeCount * (float)gain / (float)opponent_remaining) * 6
+                                - ((threatMultiplier > 0 ? threatMultiplier : 0) * threat)
                                 - (waste)
                                 ;
                                 break;
@@ -207,17 +229,32 @@ namespace Game4
 
                         case (int)Enum.BotDecision.Defense:
                             {
-                                temp = (challengeCount * (float)gain / (float)opponent_remaining + challengeCount * CHALLENGED)
-                                - ((threatMultiplier >= 0 ? threatMultiplier : 0) * threat) * 4
+                                temp =
+                                  (challengeCount * (float)gain / (float)opponent_remaining)
+                                - ((threatMultiplier > 0 ? threatMultiplier : 0) * threat) * 6
                                 - (waste)
                                 ;
                                 break;
                             }
 
-                        default: //case (int)Enum.BotDecision.Defense:
+                        default: //case (int)Enum.BotDecision.Basic:
                             {
-                                temp = (challengeCount * (float)gain / (float)opponent_remaining + challengeCount * CHALLENGED)
-                                - ((threatMultiplier >= 0 ? threatMultiplier : 0) * threat)
+                                // calculation for best deal is weighted by 3 factors
+                                // incentive - threat - waste, where
+
+                                // i) incentive
+                                //      amt of cards that could possibly be won over * gain/opponent's remaining
+                                //      in which the less card opponent has, there is better gain
+
+                                // ii) threat
+                                //      count of open sides * averaged threat
+
+                                // iii) waste
+                                //      amt of value not used
+
+                                temp =
+                                  (challengeCount * (float)gain / (float)opponent_remaining)// + challengeCount * CHALLENGED)
+                                - ((threatMultiplier > 0 ? threatMultiplier : 0) * threat)
                                 - (waste)
                                 ;
                                 break;
@@ -233,9 +270,9 @@ namespace Game4
 
                     //float temp = ((float)gain / (float)opponent_remaining) - (threat) - (waste);
 
-                    if (bestDeal < temp) //if bestDeal not as good as the calculated value
+                    if (bestDeal < temp) //if current bestDeal not as good as the calculated value
                     {
-                        bestDeal = temp; //bestDeal is the calculated value
+                        bestDeal = temp; //replace current bestDeal with better bestDeal
                         bestCardID = c.ID; //save the best choice
                     }
                 }
@@ -245,11 +282,16 @@ namespace Game4
             {
                 bestCardID = -1;
                 bestDeal = -99999;
+                //waste = 0;
+                //threat = 0;
+                challengeCount = 0;
             }
+
+            //Debug.WriteLine(bestDeal);
         }
 
 
-        //DEBUG DE-BUGGER Da-BURGER====================================================
+        //DEBUG DE-BUGGER Da-BURGER//////////////===
         public void printThreat()
         {
             Debug.WriteLine(id + "|| " + threatNorth + " | " + threatSouth + " | " + threatEast + " | " + threatWest);

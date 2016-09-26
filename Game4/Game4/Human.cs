@@ -26,7 +26,7 @@ namespace Game4
             base.Reset(ref cards, ref _tiles);
         }
 
-        //begin update=================================================
+        //begin update//////////////
         public override bool Update()
         {
             mouse = Mouse.GetState();
@@ -40,12 +40,12 @@ namespace Game4
                         t.State = (int)Enum.TileState.Hover;
                         if (mouse.LeftButton == ButtonState.Pressed)
                         {
-                            Debug.WriteLine("Clicked");
+                            //Debug.WriteLine("Clicked");
                             tile = t;
                             tile.State = (int)Enum.TileState.Selected;
                             if (card != null)
                             {
-                                Debug.WriteLine("Card != null");
+                                //Debug.WriteLine("Card != null");
                                 moveCard();
                                 return true;
                             }
@@ -104,7 +104,7 @@ namespace Game4
             return false;
 
 
-        }//end update=================================================
+        }//end update//////////////
 
 
 
