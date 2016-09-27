@@ -36,9 +36,9 @@ namespace Game4
         private int[,] cardVal = new int[NUM_OF_CARD, NUM_OF_SIDE];
         private int turn;
 
-        Control human = new Human(ref cards_player, ref tiles);
+        Control human;
         //Control bot = new Human(ref cards_bot, ref tiles);
-        Control bot = new Bot(ref cards_bot, ref tiles, ref cards_player);
+        Control bot;
 
 
         //init//////////////////////=
@@ -46,6 +46,9 @@ namespace Game4
         {
             for (int i = 0; i < NUM_OF_TILE; i++)
                 tiles[i] = new Tile(i);
+
+            human = new Human(ref cards_player, ref tiles);
+            bot = new Bot(ref cards_bot, ref tiles, ref cards_player);
 
             //generate a 2d array, pass same value to both player and comp cards
             CardValueGenerator cardValGen = new CardValueGenerator(ref cardVal, NUM_OF_CARD);
@@ -57,11 +60,10 @@ namespace Game4
 
             turn = startGame();
 
-
             gui = new GUI(ref tiles, ref cards_player, ref cards_bot);
             this.IsMouseVisible = gui.ShowMouse;
 
-            Window.Position = new Point(100, 20);
+            Window.Position = new Point(0, 0);
             graphics.PreferredBackBufferWidth = gui.Width;
             graphics.PreferredBackBufferHeight = gui.Height;
             graphics.ApplyChanges();
